@@ -46,7 +46,7 @@ from shapely.geometry import LineString, Point
 movements=gpd.GeoDataFrame(columns=['userid','geometry'])
 count=0
 for key,group in grouped:
-  group=group.sort_values('timesstamp')
+  group=group.sort_values('timestamp')
   if len(group['geometry'])>=2:
     line=(LineString(list(group['geometry'])))
   else:
@@ -90,7 +90,8 @@ movements.head()
 #  - What was the maximum distance travelled in meters?
 
 # YOUR CODE HERE 6 to find max, min,mean of the distance.
-
+from statistics import mean
+print(mean(movements['distance'].dropna()))
 # - Finally, save the movements of into a Shapefile called ``some_movements.shp``
 
 # YOUR CODE HERE 7 to save as Shapefile
