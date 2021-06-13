@@ -52,6 +52,7 @@ for key,group in grouped:
   else:
     line=None
   count+=1
+  
   movements.at[count,'userid']=key
   movements.at[count,'geometry']=line
 movements.crs=CRS.from_epsg(32735)
