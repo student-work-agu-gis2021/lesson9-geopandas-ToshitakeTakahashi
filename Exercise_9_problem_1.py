@@ -34,6 +34,7 @@ coordpairs=list(zip(longitudes,latitudes))
 # YOUR CODE HERE 2 
 poly = Polygon(coordpairs)
 
+
 # CODE FOR TESTING YOUR SOLUTION
 
 # Check the first coordinate pair. Shoud be: (29.99671173095703, 63.748023986816406)
